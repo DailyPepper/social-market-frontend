@@ -76,5 +76,25 @@ export const Filter = {
         {
             pol: 'Унисекс'
         },
+    ],
+    SizeSneaker: [
+        {
+            sneak: 39
+        },
+        {
+            sneak: 40
+        },
+        {
+            sneak: 41
+        },
+        {
+            sneak: 42
+        },
+        {
+            sneak: 43
+        },
+        {
+            sneak: 44
+        },
     ]
 }

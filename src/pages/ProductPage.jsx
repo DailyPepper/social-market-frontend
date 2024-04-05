@@ -1,65 +1,59 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Product from '../components/product/Product';
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
+import React from "react";
+import { useParams } from "react-router-dom";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
 import products from '../components/home/home-components/products';
-import Filters from '../components/home/home-components/Filters';
-import { Slider } from '../components/home/home-components/Slider';
-import Pagination from '../components/pagination/Pagination';
+import { Filter } from '../components/home/home-components/Filter';
+import { colors } from '../components/home/home-components/color';
 
 const ProductPage = () => {
-  const [page, setPage] = useState(1);
-  const productsPerPage = 6;
+    const { id } = useParams();
+    const product = products.find(product => product._id === id);
 
-  const startIndex = (page - 1) * productsPerPage;
-  const endIndex = startIndex + productsPerPage;
-  const paginatedProducts = products.slice(startIndex, endIndex);
+    if (!product) {
+        return <div>Продукт не найден</div>;
+    }
 
-  const handlePageChange = (newPage) => {
-    setPage(newPage);
-  };
-
-  const handleClick = (myLink) => () => {
-    window.location.href = myLink;
-  };
-
-  return (
-    <>
-      <Header />
-      <div className="pt-[6rem]">
-        <Slider />
-      </div>
-      <div className="flex justify-center  justify-items-center   pl-[6rem]">
-        <div className="pt-[5rem]">
-          <Filters />
-        </div>
-        <div
-          onClick={handleClick('/product')}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-3 gap-4 font-ralewayFont p-[10rem] pt-[5rem]"
-        >
-          {paginatedProducts.map((product, index) => (
-            <Link key={index} to={`/product/${product._id}`}>
-              <Product
-                _id={product._id}
-                img={product.img}
-                productName={product.productName}
-                price={product.price}
-                color={product.color}
-              />
-            </Link>
-          ))}
-        </div>
-      </div>
-      <Pagination
-        totalItems={products.length}
-        itemsPerPage={productsPerPage}
-        currentPage={page}
-        onPageChange={handlePageChange}
-      />
-      <Footer />
-    </>
-  );
-};
-
+    return ( 
+        <>
+            <Header/>
+            <section className="flex justify-around h-[39rem]">
+                <div className="">
+                    <img src={product.img} alt={product.productName} className="w-[40rem] h-[40rem]"/>
+                </div>
+                <div className="flex items-center flex-col justify-center gap-[3rem]">
+                    <h1 className="font-bold text-[1.5rem]">{product.productName}</h1>
+                    <div className="flex gap-1">
+                        {colors.map((color, index) => (
+                            <div key={index} className="w-[1.5rem] h-[1.5rem] rounded-full cursor-pointer" style={{ backgroundColor: color.color }} title={color.alt}></div>
+                        ))}
+                    </div>
+                    <div className="flex flex-col items-center gap-[2rem]">
+                        <p>Размеры</p>
+                        <ul className="flex gap-[1rem]">
+                            {Filter.SizeSneaker.map((sneak, index) => (
+                                <li key={index} className="cursor-pointer">
+                                    {sneak.sneak}
+                                </li>   
+                            ))}                        
+                        </ul>
+                        <p>{product.price}$</p>   
+                    </div>
+                    <button className="border border-black w-[200px] h-[40px]">
+                        Добавить в корзину
+                    </button>
+                </div>
+            </section>
+            <section className="flex justify-around pb-[20rem]">
+                <h3>Описание</h3>
+                <div>
+                    <p>{product.productName}</p>
+                    <p>{product.description}</p>
+                </div>
+            </section>
+            <Footer/>
+        </>
+     );
+}
+ 
 export default ProductPage;

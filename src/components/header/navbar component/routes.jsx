@@ -5,7 +5,7 @@ export const routes = [
   },
   {
     title: "Обувь",
-    href: "/product",
+    href: "/sneaker",
   },
   {
     title: "Аксессуары",

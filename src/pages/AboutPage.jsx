@@ -3,7 +3,9 @@ import Header from "../components/header/Header";
 function AboutPage() {
     return (
         <div>
-            <Header></Header>
+            <Header>
+                
+            </Header>
         </div>
     );
 }
