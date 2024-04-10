@@ -39,7 +39,7 @@ const ProductGrid = () => {
           itemsPerPage={productsPerPage}
           currentPage={page}
           onPageChange={handlePageChange}
-        />
+        /> 
       </div>
     </div>
   );

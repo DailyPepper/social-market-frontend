@@ -35,9 +35,9 @@ const ProductPage = () => {
             <Header />
             <section className="flex justify-around h-[39rem]">
                 <div className="flex">
-                    <IoIosArrowBack className="mt-[300px] cursor-pointer" onClick={handleEndClick} size={20}/>
+                    <IoIosArrowBack className="mt-[300px] cursor-pointer " onClick={handleEndClick} size={25}/>
                         <img src={images[currentImageIndex]} alt={product.productName} className="w-[40rem] h-[40rem]" />
-                    <IoIosArrowForward className="mt-[300px] cursor-pointer" onClick={handleNextClick} size={20}/>
+                    <IoIosArrowForward className="mt-[300px] cursor-pointer" onClick={handleNextClick} size={25}/>
                 </div>
                 <div className="flex items-center flex-col justify-center gap-[3rem]">
                     <h1 className="font-bold text-[1.5rem]">{product.productName}</h1>
