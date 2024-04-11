@@ -11,7 +11,7 @@ const Product = (props) => {
   }
   return (
     <div className="w-full relative group">
-      <div className="max-w-80 max-h-80 relative overflow-y-hidden border-black border-2">
+      <div className="max-w-80 max-h-81 relative overflow-y-hidden border-black border-2">
         <div>
           <img className="w-full h-full" src={props.img} />
         </div>

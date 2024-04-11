@@ -15,12 +15,10 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => 
       onPageChange(currentPage - 1);
     }
   };
-
-  // Determine if it's the last page
   const isLastPage = currentPage === totalPages;
 
   return (
-    <div className="flex justify-center w-full pt-[4rem] gap-[5rem]">
+    <div className="flex justify-center w-full pt-[4rem] gap-[5rem] select-none">
       <button onClick={handlePrevPage} disabled={currentPage === 1}>
         <IoIosArrowBack size={25}/>
       </button>

@@ -31,14 +31,14 @@ const CartPage = () => {
             <div className="pt-[6rem]">
                 <Slider />
             </div>
-            <div className="flex justify-center justify-items-center pl-[6rem]">
+            <div className="flex justify-center justify-items-center pl-[6rem] gap-[4rem]">
                 <div className="pt-[5rem]">
                     <Filters />
                 </div>
-                <div className="flex flex-col items-center">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-3 gap-4 font-ralewayFont p-[10rem] pt-[5rem]">
+                <div className="flex flex-col items-center ">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-3 gap-4 font-ralewayFont pt-[5rem]">
                         {paginatedProducts.map((clothes, index) => (
-                            <Link key={index} to={`/product/${clothes._id}`} onClick={handleClick(`/product/${clothes._id}`)}>
+                            <Link key={index} to={`/clothes/${clothes._id}`} onClick={handleClick(`/clothes/${clothes._id}`)}>
                                 <Product
                                     _id={clothes._id}
                                     img={clothes.img}
@@ -57,7 +57,10 @@ const CartPage = () => {
                     />
                 </div>
             </div>
-            <Footer />
+            <div className="mt-[3rem]">
+                <Footer  /> 
+            </div>
+
         </div>
     );
 }

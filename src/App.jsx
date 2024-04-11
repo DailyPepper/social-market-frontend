@@ -7,7 +7,7 @@ import CartPage from './pages/CartPage'
 import AboutPage from './pages/AboutPage'
 import SneakerPage from './pages/SneakerPage'
 import ProductPage from './pages/ProductPage'
-
+import ClothesPage from './pages/ClothesPage'
 function App() {
   return(
     <div className='font-ralewayFont'>
@@ -20,6 +20,7 @@ function App() {
         <Route path='/cart' element={<CartPage/>}></Route>
         <Route path='/about' element={<AboutPage/>}></Route>
         <Route path='/product/:id' element={<ProductPage/>}></Route>
+        <Route path='/clothes/:id' element={<ClothesPage/>}></Route>
       </Routes>
     </div>
   )

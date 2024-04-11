@@ -30,14 +30,12 @@ const SneakerPage = () => {
       <div className="pt-[6rem]">
         <Slider />
       </div>
-      <div className="flex justify-center  justify-items-center   pl-[6rem]">
+      <div className="flex justify-center justify-items-center pl-[6rem] gap-[4rem]">
         <div className="pt-[5rem]">
           <Filters />
         </div>
-        <div
-          onClick={handleClick('/product')}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-3 gap-4 font-ralewayFont p-[10rem] pt-[5rem]"
-        >
+        <div className="flex flex-col items-center ">
+        <div onClick={handleClick('/product')} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-3 gap-4 font-ralewayFont pt-[5rem]">
           {paginatedProducts.map((product, index) => (
             <Link key={index} to={`/product/${product._id}`} onClick={handleClick(`/product/${product._id}`)}>
               <Product
@@ -49,15 +47,18 @@ const SneakerPage = () => {
               />
             </Link>
           ))}
-        </div>
-      </div>
-      <Pagination
+        </div>      <Pagination
         totalItems={products.length}
         itemsPerPage={productsPerPage}
         currentPage={page}
         onPageChange={handlePageChange}
       />
-      <Footer />
+      </div>
+
+      </div>
+      <div className='mt-[3rem]'>
+        <Footer />
+      </div>
     </>
   );
 };
