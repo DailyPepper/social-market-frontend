@@ -47,14 +47,14 @@ const SneakerPage = () => {
               />
             </Link>
           ))}
-        </div>      <Pagination
-        totalItems={products.length}
-        itemsPerPage={productsPerPage}
-        currentPage={page}
-        onPageChange={handlePageChange}
-      />
-      </div>
-
+        </div>      
+          <Pagination
+            totalItems={products.length}
+            itemsPerPage={productsPerPage}
+            currentPage={page}
+            onPageChange={handlePageChange}
+          />
+        </div>
       </div>
       <div className='mt-[3rem]'>
         <Footer />

@@ -8,10 +8,10 @@ const Filters = () => {
     };
     return ( 
         <>
-            <div className="">
-      <p className="text-4xl cursor-pointer" onClick={handleFilterClick}>
-        Фильтры
-      </p>
+          <div className="">
+            <p className="text-4xl cursor-pointer" onClick={handleFilterClick}>
+              Фильтры
+            </p>
       {click && (
         <div className="block pt-[2rem]">
           <ul className="flex gap-[2rem] contents">
