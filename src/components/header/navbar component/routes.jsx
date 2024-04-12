@@ -9,7 +9,7 @@ export const routes = [
   },
   {
     title: "Аксессуары",
-    href: "/",
+    href: "/accessories",
   },
   {
     title: "Бренды",

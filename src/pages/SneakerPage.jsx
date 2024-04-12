@@ -30,7 +30,7 @@ const SneakerPage = () => {
       <div className="pt-[6rem]">
         <Slider />
       </div>
-      <div className="flex justify-center justify-items-center pl-[6rem] gap-[4rem]">
+      <div className="flex justify-center justify-items-center gap-[4rem]">
         <div className="pt-[5rem]">
           <Filters />
         </div>

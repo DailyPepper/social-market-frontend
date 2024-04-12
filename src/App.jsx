@@ -8,6 +8,9 @@ import AboutPage from './pages/AboutPage'
 import SneakerPage from './pages/SneakerPage'
 import ProductPage from './pages/ProductPage'
 import ClothesPage from './pages/ClothesPage'
+import AccessoriesCard from './pages/AccessoriesCard'
+import AccessoriesPage from './pages/AccessoriesPage'
+
 function App() {
   return(
     <div className='font-ralewayFont'>
@@ -19,8 +22,10 @@ function App() {
         <Route path='/fav' element={<FavScreen/>}></Route>
         <Route path='/cart' element={<CartPage/>}></Route>
         <Route path='/about' element={<AboutPage/>}></Route>
+        <Route path='/accessories' element={<AccessoriesPage/>}></Route>
         <Route path='/product/:id' element={<ProductPage/>}></Route>
         <Route path='/clothes/:id' element={<ClothesPage/>}></Route>
+        <Route path='/accessories/:id' element={<AccessoriesCard/>}></Route>
       </Routes>
     </div>
   )

@@ -3,19 +3,19 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import { Slider } from "../components/home/home-components/Slider";
 import Filters from "../components/home/home-components/Filters";
-import clothes from '../components/Categot/clothes';
+import accessories from '../components/Categot/accessories';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Pagination from '../components/pagination/Pagination';
 
-const CartPage = () => {
+const AccessoriesPage = () => {
     const [page, setPage] = useState(1);
     const productsPerPage = 6;
 
     const startIndex = (page - 1) * productsPerPage;
     const endIndex = startIndex + productsPerPage;
 
-    const paginatedProducts = clothes.slice(startIndex, endIndex);
+    const paginatedProducts = accessories.slice(startIndex, endIndex);
 
     const handleClick = (myLink) => () => {
         window.location.href = myLink;
@@ -37,20 +37,20 @@ const CartPage = () => {
                 </div>
                 <div className="flex flex-col items-center ">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-3 gap-4 font-ralewayFont pt-[5rem]">
-                        {paginatedProducts.map((clothes, index) => (
-                            <Link key={index} to={`/clothes/${clothes._id}`} onClick={handleClick(`/clothes/${clothes._id}`)}>
+                        {paginatedProducts.map((accessories, index) => (
+                            <Link key={index} to={`/accessories/${accessories._id}`} onClick={handleClick(`/accessories/${accessories._id}`)}>
                                 <Product
-                                    _id={clothes._id}
-                                    img={clothes.img}
-                                    productName={clothes.productName}
-                                    price={clothes.price}
-                                    color={clothes.color}
+                                    _id={accessories._id}
+                                    img={accessories.img}
+                                    productName={accessories.productName}
+                                    price={accessories.price}
+                                    color={accessories.color}
                                 />
                             </Link>
                         ))}
                     </div>
                     <Pagination
-                        totalItems={clothes.length}
+                        totalItems={accessories.length}
                         itemsPerPage={productsPerPage}
                         currentPage={page}
                         onPageChange={handlePageChange}
@@ -65,4 +65,4 @@ const CartPage = () => {
     );
 }
 
-export default CartPage;
+export default AccessoriesPage;
