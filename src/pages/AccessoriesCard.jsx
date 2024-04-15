@@ -7,7 +7,7 @@ import { Filter } from '../components/home/home-components/Filter';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import Bread from '../components/BreadCrumbs/index'
 const AccessoriesCard = () => {
     const { id } = useParams();
     const selectedClothes = accessories.find(item => item._id === id);
@@ -31,7 +31,10 @@ const AccessoriesCard = () => {
     return (
         <>
             <Header />
-            <section className="flex justify-around h-[39rem] pt-[7rem]">
+            <div className="pl-[9.5rem] pt-[7rem]">
+                <Bread/>  
+            </div>
+            <section className="flex justify-around h-[39rem] pt-[2rem]">
                 <div className="flex select-none">
                     <IoIosArrowBack className="mt-[300px] cursor-pointer " onClick={handleEndClick} size={25}/>
                         <img src={images[currentImageIndex]} alt={selectedClothes.productName} className="w-[35rem] h-[40rem]" />

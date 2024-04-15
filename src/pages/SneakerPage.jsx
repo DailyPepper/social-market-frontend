@@ -7,7 +7,7 @@ import products from '../components/home/home-components/products';
 import Filters from '../components/home/home-components/Filters';
 import { Slider } from '../components/home/home-components/Slider';
 import Pagination from '../components/pagination/Pagination';
-
+import Bread from '../components/BreadCrumbs/index'
 const SneakerPage = () => {
   const [page, setPage] = useState(1);
   const productsPerPage = 6;
@@ -30,12 +30,15 @@ const SneakerPage = () => {
       <div className="pt-[6rem]">
         <Slider />
       </div>
+        <div className="pl-[9.5rem] pt-[1rem]">
+          <Bread/>  
+        </div>
       <div className="flex justify-center justify-items-center gap-[4rem]">
-        <div className="pt-[5rem]">
+        <div className="pt-[3rem]">
           <Filters />
         </div>
         <div className="flex flex-col items-center ">
-        <div onClick={handleClick('/product')} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-3 gap-4 font-ralewayFont pt-[5rem]">
+        <div onClick={handleClick('/product')} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-3 gap-4 font-ralewayFont pt-[3rem]">
           {paginatedProducts.map((product, index) => (
             <Link key={index} to={`/product/${product._id}`} onClick={handleClick(`/product/${product._id}`)}>
               <Product

@@ -7,6 +7,7 @@ import { Filter } from '../components/home/home-components/Filter';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Bread from '../components/BreadCrumbs/index'
 const ClothesPage = () => {
     const { id } = useParams();
     const selectedClothes = clothes.find(item => item._id === id);
@@ -30,10 +31,13 @@ const ClothesPage = () => {
     return (
         <>
             <Header />
-            <section className="flex justify-around h-[39rem] pt-[7rem]">
+            <div className="pl-[9.5rem] pt-[7rem]">
+                <Bread/>  
+            </div>
+            <section className="flex justify-around h-[39rem] pt-[2rem]">
                 <div className="flex select-none">
                     <IoIosArrowBack className="mt-[300px] cursor-pointer " onClick={handleEndClick} size={25}/>
-                        <img src={images[currentImageIndex]} alt={selectedClothes.productName} className="w-[40rem] h-[40rem]" />
+                        <img src={images[currentImageIndex]} alt={selectedClothes.productName} className="w-[35rem] h-[40rem]" />
                     <IoIosArrowForward className="mt-[300px] cursor-pointer" onClick={handleNextClick} size={25}/>
                 </div>
                 <div className="flex items-center flex-col justify-center gap-[3rem]">
@@ -58,7 +62,7 @@ const ClothesPage = () => {
                     </button>
                 </div>
             </section>
-            <section className="flex justify-around w-[1100px] flex-col pl-[11rem] pb-[20px] pr-[100px] pt-[10rem]">
+            <section className="flex justify-around w-[1100px] flex-col pl-[12.5rem] pb-[20px] pr-[100px] pt-[6rem]">
                 <h3 className="font-bold text-[1rem]">Описание</h3>
                 <ul className="flex flex-col gap-[15px] pt-[16px]">
                     <li>Бренд: {selectedClothes.productName}</li>

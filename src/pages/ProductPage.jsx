@@ -4,6 +4,7 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import products from '../components/home/home-components/products';
 import { Filter } from '../components/home/home-components/Filter';
+import Bread from '../components/BreadCrumbs/index'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -33,6 +34,9 @@ const ProductPage = () => {
     return (
         <>
             <Header />
+            <div className="pl-[9.5rem] pt-[7rem]">
+                <Bread/>  
+            </div>
             <section className="flex justify-around h-[39rem]">
                 <div className="flex select-none">
                     <IoIosArrowBack className="mt-[300px] cursor-pointer " onClick={handleEndClick} size={25}/>
