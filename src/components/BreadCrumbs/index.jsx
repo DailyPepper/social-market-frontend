@@ -11,7 +11,8 @@ const Bread = () => {
         "login": "Авторизация", 
         "sneaker": "Кроссовки", 
         "cart": "Одежда", 
-        "accessories" : "Аксессуары"
+        "accessories" : "Аксессуары",
+        "brand" : 'Бренды'
     };
 
     const breadcrumbs = pathNames.map((path, index) => {
