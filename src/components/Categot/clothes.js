@@ -1,7 +1,7 @@
 const clothes = [
     {
         _id: "100101",
-        img: "https://www.stussy.com/cdn/shop/files/1925021_NATL_1_b8742fdb-269d-4843-b6fc-0c17767f031c.jpg?v=1711655300&width=1920",
+        img: "https://www.stussy.com/cdn/shop/products/116550_BA22_1_ebd55e78-2273-408a-b610-33b37a80ac64.jpg?v=1683590897&width=1920",
         img2: "https://www.stussy.com/cdn/shop/files/1925021_NATL_2_8e5cb131-5a05-48a8-bff0-556233c89b72.jpg?v=1711655300&width=1920",
         img3: "",
         img4: "",
@@ -14,7 +14,7 @@ const clothes = [
     },
     {
         _id: "100102",
-        img: "https://www.stussy.com/cdn/shop/files/1925021_GUAV_1_6b12ee38-a948-45fd-8c79-5c830562d4ca.jpg?v=1711655299&width=1920",
+        img: "https://www.stussy.com/cdn/shop/products/116550_BA22_1_ebd55e78-2273-408a-b610-33b37a80ac64.jpg?v=1683590897&width=1920",
         img2: "https://www.stussy.com/cdn/shop/files/1925021_GUAV_2_c46ee449-17e9-4e4e-a42c-9095c8081a1a.jpg?v=1711655299&width=1920",
         img3: "",
         img4: "",
@@ -27,7 +27,7 @@ const clothes = [
     },
     {
         _id: "100103",
-        img: "https://www.stussy.com/cdn/shop/files/1925021_BLAC_1_3ab85ac3-0d35-4427-a44f-a6cc4997164d.jpg?v=1711655298&width=1920",
+        img: "https://www.stussy.com/cdn/shop/products/116550_BA22_1_ebd55e78-2273-408a-b610-33b37a80ac64.jpg?v=1683590897&width=1920",
         img2: "https://www.stussy.com/cdn/shop/files/1925021_BLAC_2_e28abbf0-04cc-4dd4-ab36-6e5f49d218a8.jpg?v=1711655298&width=1920",
         img3: "",
         img4: "",
@@ -40,7 +40,7 @@ const clothes = [
     },
     {
         _id: "100104",
-        img: "https://www.stussy.com/cdn/shop/files/1925021_OLIV_1_9bfba0cc-b1ab-4a51-b3de-0ccb34466ce8.jpg?v=1711655302&width=1920",
+        img: "https://www.stussy.com/cdn/shop/products/116550_BA22_1_ebd55e78-2273-408a-b610-33b37a80ac64.jpg?v=1683590897&width=1920",
         img2: "https://www.stussy.com/cdn/shop/files/1925021_OLIV_2_4ed6ace8-c187-4555-b335-ddb7e7c43567.jpg?v=1711655302&width=1920",
         img3: "",
         img4: "",
@@ -53,7 +53,7 @@ const clothes = [
     },
     {
         _id: "100105",
-        img: "https://www.stussy.com/cdn/shop/products/118538_PURP_1.jpg?v=1707183748&width=1920",
+        img: "https://www.stussy.com/cdn/shop/products/116550_BA22_1_ebd55e78-2273-408a-b610-33b37a80ac64.jpg?v=1683590897&width=1920",
         img2: "https://www.stussy.com/cdn/shop/products/118538_PURP_5.jpg?v=1708116832&width=1920",
         img3: "https://www.stussy.com/cdn/shop/products/118538_PURP_6.jpg?v=1708116832&width=1920",
         img4: "https://www.stussy.com/cdn/shop/products/118538_PURP_3.jpg?v=1708116832&width=1920",
